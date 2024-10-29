@@ -1,46 +1,21 @@
-# Getting Started with Create React App
+# 1. 리액트 컴포넌트 타입스크립트로 작성하기
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 정리
+- React.FC는 defaultProps가 제대로 동작하지 않기 때문에 좋지 않음.
+- 함수형 컴포넌트를 작성 할 때는 화살표 함수로 작성해도 되고, function 키워드를 사용해도 됨.
+- Props에 대한 타입을 선언 할 땐 interface 또는 type을 사용하면 되며, 프로젝트 내부에서 일관성을 지켜야함.
 
-## Available Scripts
+<br>
 
-In the project directory, you can run:
+# 2. 타입스크립트로 리액트 Hooks 사용해보기
 
-### `npm start`
+## 정리
+- useState를 사용 할 때에는 useState<string>과 같이 Generics를 사용함.
+- useState의 Generics는 상황에 따라 생략 가능.
+  - 상태가 null인 상황이 발생 할 수 있을 때 Generics 명시
+  - 배열 또는 까다로운 객체를 다룰 때 Generics 명시
+- useReducer를 사용 할 때에는 action에 대한 타입스크립트 타입들을 모두 준비해서 | 문자를 사용해 결합시킴.
+- 타입스크립트 환경에서 useReducer를 사용하면 자동완성이 잘 되고 타입체킹도 잘 됨.
+- useRef를 사용 할 땐 Generics로 타입을 정함.
+- useRef를 사용하여 DOM에 대한 정보를 담을 땐, 초깃값을 null로 설정해야 하고 값을 사용하기 위해서 NULL 체킹도 해주어야 함.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
