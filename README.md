@@ -1,46 +1,15 @@
-# Getting Started with Create React App
+# Context API 사용해보기
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Context API란 ?
+- React version 16부터 사용 가능한 리액트의 내장 API
+- 앱에서 컴포넌트에게 props를 사용하지 않고 필요한 데이터(state)를 쉽게 공유할 수 있게 해줌.
+- 따라서 모든 컴포넌트에서 사용할 수 있는 데이터(state)를 전달할 때 유용
 
-## Available Scripts
+## Component
+- TodoForm.tsx: 새 할 일을 등록할 때 사용
+- TodoItem.tsx: 할 일에 대한 정보를 보여줌
+- TodoList.tsx: 여러 TodoItem들을 렌더링해줌
+- TodoContext.tsx: 상태 전용 Context와 디스패치 전용 Context 두 개를 만들어 낭비 렌더링 방지
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 정리
+- Context API를 사용하여 상태를 관리 할 때 useReducer를 사용하고 상태 전용 Context와 디스패치 전용 Context를 만들면 유용
