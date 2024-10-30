@@ -10,7 +10,7 @@ type State = {
 };
 
 type Action =
-    | { type: 'SET_COUNT'; count: number}
+      { type: 'SET_COUNT'; count: number}
     | { type: 'SET_TEXT'; text: string}
     | { type: 'SET_COLOR'; color: Color}
     | { type: 'TOGGLE_GOOD'};
